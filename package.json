@@ -1,0 +1,10 @@
+{
+  "name": "sauron",
+  "version": "1.0.0",
+  "description": "Learning project",
+  "main": "index.js",
+  "repository": "https://github.com/itskishore/sauron.git",
+  "author": "Kishore Reddy K",
+  "license": "MIT",
+  "private": null
+}
