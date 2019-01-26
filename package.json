@@ -1,10 +1,29 @@
 {
   "name": "sauron",
   "version": "1.0.0",
-  "description": "Learning project",
-  "main": "index.js",
+  "description": "A users and events project developed with node.js mongodb, graphql and react.js",
+  "main": "app.js",
   "repository": "https://github.com/itskishore/sauron.git",
   "author": "Kishore Reddy K",
-  "license": "MIT",
-  "private": null
+  "license": "",
+  "private": false,
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.1.1",
+    "mongoose": "^5.4.6"
+  },
+  "devDependencies": {
+    "eslint": "5.3.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "nodemon": "^1.18.9"
+  }
 }

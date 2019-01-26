@@ -1,0 +1,7 @@
+{
+    "env": {
+        "MONGO_USER": "sauron",
+        "MONGO_PASSWORD": "WvZAdJozLY51Rz1y",
+        "MONGO_DB": "sauron-events"
+    }
+}
