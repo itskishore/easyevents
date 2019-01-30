@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const graphqlHTTP = require('express-graphql');
 const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/easyevents', {useNewUrlParser: true});
+const easyEDb = mongoose.connection;
 
 const app = express();
 
@@ -19,8 +21,14 @@ app.use('/graphql',
 		graphiql: true
 	})
 );
+easyEDb.on('error', console.error.bind(console, 'connection error:'));
+easyEDb.once('open', () => {
+	app.listen(3000);
+	console.log('Mongoose connected and app listens on 3000');
+});
 
-mongoose
+// MongoDB Atlas cluster connection
+/* mongoose
 	.connect(
 		`mongodb+srv://${process.env.MONGO_USER}:${
 		process.env.MONGO_PASSWORD
@@ -31,4 +39,4 @@ mongoose
 		console.log('Mongoose connected and app listens on 3000');
 	}).catch(error => {
 		console.error('Error in Mongoose connection ', error);
-	});
+	}); */
